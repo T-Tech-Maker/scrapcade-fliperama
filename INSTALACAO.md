@@ -18,7 +18,7 @@ Este tutorial mostra como montar o ScrapCade num iChroma II (ou aparelho parecid
 
 ## 2. Ligar o adb pela rede
 
-No aparelho, o sistema precisa ter o `adb` pela rede na porta 5555 (veja `MAPA_DO_CARTAO.md`, no repositório privado, seção FLIPERAMA 1). Depois, no computador:
+No aparelho, o sistema precisa ter o `adb` pela rede na porta 5555 (o procedimento completo não está neste repositório; ele depende do firmware do seu aparelho). Depois, no computador:
 
 ```bash
 adb connect IP_DO_APARELHO:5555
@@ -73,7 +73,7 @@ Instale os emuladores separadamente. Eles não vêm neste repositório:
 | Doom e similares | RetroArch com PrBoom | o mesmo RetroArch |
 | Half-Life | Xash3D 0.17.1 + dados do jogo | xash3d.su |
 
-Os núcleos do RetroArch precisam ir para `/data/local/cores/`. No aparelho, alguns núcleos só carregam com a biblioteca `libcx.so`, que está em `emuladores/cores/libcx.c` no repositório privado.
+Os núcleos do RetroArch precisam ir para `/data/local/cores/`. No aparelho, alguns núcleos só carregam com a biblioteca `libcx.so`, que não está neste repositório. Você precisa montá-la a partir do código de uma biblioteca C pequena com as funções que os núcleos pedem.
 
 ## 7. Testar
 
