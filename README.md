@@ -3,6 +3,26 @@
 Menu de jogos (estilo "capas em carrossel") e driver de controle para um aparelho Android 2.3.3 com 512 MB de RAM,
 processador S5PV210 de 1 GHz e saída de vídeo de 800x480, que foi reaproveitado como fliperama.
 
+## Diferenças em relação ao iChroma original
+
+O aparelho é um iChroma II (analisador de laboratório, Boditech). O sistema original era clínico e fechado; esta versão é um fliperama.
+
+| | iChroma II original | ScrapCade (esta versão) |
+|---|---|---|
+| Uso | analisador de imunoensaio, com dados de pacientes | fliperama, sem dados pessoais |
+| Menu | telas do fabricante | menu de capas em carrossel, feito em OpenGL ES |
+| Rede | não usada pelo usuário | IP na barra de cima; página no navegador (porta 8080) para enviar, apagar e trocar capas; ADB pela rede para manutenção (porta 5555); hora pela internet (NTP) |
+| Som | alarmes e bipes de teste | **sem som**: a biblioteca de áudio original reinicia o aparelho (ver Limitações) |
+| Controle | não tinha | controle USB Xbox 360, com o driver `joyd` |
+| Jogos | não tinha | sistema por console: PS1, GBA, GB/GBC, NES, SNES, Mega Drive, N64, Neo Geo, arcade e PC (Half-Life e Doom) |
+
+### Como funciona o modo "só jogar"
+
+1. Copie o jogo para a pasta **Jogos novos** do cartão, ou ligue um pen drive no cabo OTG. Também dá para enviar pelo navegador (porta 8080).
+2. O organizador move o arquivo para a pasta do console. Ele só mexe em arquivo que parou de crescer, para não pegar cópia pela metade.
+3. Com a rede ligada, o menu baixa sozinho a capa e a imagem de fundo, e preenche ano, empresa e gênero. Sem rede, mostra o nome do jogo e o console.
+4. Você escolhe o jogo com o controle e aperta A. O menu escolhe o emulador certo e abre direto no jogo, sem configurar nada.
+
 ## O que tem aqui
 
 - `launcher/`: o app de menu (Java, Android 2.3). Carrossel de capas pela GPU, favoritos, mais jogados, fundo do jogo,
