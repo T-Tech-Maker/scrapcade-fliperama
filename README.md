@@ -50,6 +50,8 @@ Mupen64Plus AE 2.4.4, My Boy! Free e Xash3D.
 - `capturas/painel_sistema.png`: painel "Sistema" (tema, animações, uso de CPU, memória e cartão).
 - `capturas/arquivos.png`: gerenciador de arquivos pelo controle (copiar, mover, apagar, colar).
 
+Fotos do aparelho (em `fotos/`): frente com o menu ligado, traseira com a porta de rede e o adaptador USB, e o menu ao vivo. A tela mostra capas de jogos de terceiros, a mesma ressalva das capturas.
+
 As capas dos jogos e os logos dos consoles nas capturas são de terceiros. Confirmar antes de tornar o repositório público.
 
 ## Inspirações
