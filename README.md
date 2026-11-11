@@ -3,6 +3,20 @@
 Menu de jogos (estilo "capas em carrossel") e driver de controle para um aparelho Android 2.3.3 com 512 MB de RAM,
 processador S5PV210 de 1 GHz e saída de vídeo de 800x480, que foi reaproveitado como fliperama.
 
+## T-OS e ScrapCade: o que é cada um
+
+O projeto tem duas partes:
+
+- **ScrapCade é o programa do menu.** É um app Android próprio (`com.thiago.launcher`), escrito em Java e instalado como qualquer app. Ele fica configurado como a tela inicial, por isso aparece quando o aparelho liga. Dá para atualizar ou desinstalar sem mexer no sistema.
+- **T-OS é o sistema modificado.** É o Android 2.3 original do aparelho mais as mudanças que o transformam em fliperama:
+  - **Driver do controle (`joyd`):** programa em C em `/system/xbin`, iniciado por um script de boot.
+  - **Logo de inicialização:** gravado no bootloader e no kernel.
+  - **Biblioteca de áudio muda:** trocada em `/system/lib`, porque a original trava o aparelho.
+  - **Boot mais rápido:** apps de sistema pré-compilados.
+  - **ADB pela rede:** ligado no sistema, para manutenção.
+
+Este repositório tem o código do ScrapCade e do `joyd`. As modificações de bootloader, kernel e bibliotecas do sistema não estão aqui, porque dependem do firmware do aparelho.
+
 ## Diferenças em relação ao iChroma original
 
 O aparelho é um iChroma II (analisador de laboratório, Boditech). O sistema original era clínico e fechado; esta versão é um fliperama.
