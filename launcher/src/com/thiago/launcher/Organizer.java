@@ -156,14 +156,21 @@ final class Organizer {
         return false;
     }
 
+    /**
+     * Pastas de sistema que nunca tem jogo. Em 11/11/2026 um pen drive com o instalador do Windows trouxe
+     * bootfix.bin, efisys.bin e outros .bin de boot/efi/sources, que entraram no Mega Drive como cartuchos.
+     */
+    private static final java.util.HashSet<String> SKIP_USB_DIRS = new java.util.HashSet<String>(java.util.Arrays.asList(
+            "lost.dir", "system volume information", "android", "$recycle.bin", "recycler",
+            "boot", "efi", "sources", "support", "windows", "program files", "program files (x86)", "dcim"));
+
     private static void scanUsb(File d, int depth, List<File> out) {
         File[] fs = d.listFiles();
         if (fs == null) return;
         for (File f : fs) {
             if (f.isDirectory()) {
                 String n = f.getName();
-                if (depth < 3 && !n.startsWith(".") && !n.equals("LOST.DIR") && !n.equals("System Volume Information")
-                        && !n.equals("Android")) scanUsb(f, depth + 1, out);
+                if (depth < 3 && !n.startsWith(".") && !SKIP_USB_DIRS.contains(n.toLowerCase(Locale.US))) scanUsb(f, depth + 1, out);
             } else if (isGame(f.getName())) {
                 out.add(f);
             }
