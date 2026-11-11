@@ -48,8 +48,16 @@ Mupen64Plus AE 2.4.4, My Boy! Free e Xash3D.
 
 - `capturas/menu.png`: menu principal (carrossel de capas, barra de cima com o filtro e a hora).
 - `capturas/painel_sistema.png`: painel "Sistema" (tema, animações, uso de CPU, memória e cartão).
+- `capturas/arquivos.png`: gerenciador de arquivos pelo controle (copiar, mover, apagar, colar).
 
 As capas dos jogos e os logos dos consoles nas capturas são de terceiros. Confirmar antes de tornar o repositório público.
+
+## Inspirações
+
+- **Aurora** (dashboard do Xbox 360): a ideia do carrossel de capas em destaque, com o título embaixo e o reflexo no chão, e a barra de cima com as etiquetas LB/RB para filtrar.
+- **Batocera** (sistema de emuladores para PC e placas): a organização por pasta de console (`roms/<console>`) e a pasta de capas `images/` ao lado de cada jogo, com nomes iguais aos do acervo.
+
+O desenho, as capas em carrossel e o código são próprios. Nenhum arquivo do Aurora ou do Batocera foi copiado.
 
 ## Como compilar
 
