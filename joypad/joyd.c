@@ -939,6 +939,9 @@ static void check_cmd(void)
             cat(o, " > /data/local/gpu.div");
             run_sh(c);
         }
+    } else if (starts(b, "ejeta")) {
+        /* desmonta o pen drive pelo vold (o mesmo que o Android usa): sem isso o kernel registra erros FAT ao tirar */
+        run_sh("sync; /system/bin/vdc volume unmount /mnt/usb force");
     } else if (starts(b, "reboot")) {
         run_sh("sync; reboot");
     } else if (starts(b, "hora ")) {

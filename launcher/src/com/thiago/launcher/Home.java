@@ -458,7 +458,7 @@ public class Home extends Activity implements CarouselApi.Listener {
     }
 
     private static final int OPT_THEME = 0, OPT_ANIM = 1, OPT_COVERS = 2, OPT_BG = 3, OPT_APPS = 4, OPT_FILES = 5,
-            OPT_GPU = 6, OPT_DRAW = 7, OPT_HELP = 8, OPT_INFO = 9, OPT_ANDROID = 10, OPT_REBOOT = 11, OPT_COUNT = 12;
+            OPT_GPU = 6, OPT_DRAW = 7, OPT_HELP = 8, OPT_INFO = 9, OPT_ANDROID = 10, OPT_EJECT = 11, OPT_REBOOT = 12, OPT_COUNT = 13;
 
     /** Painel de opcoes (SELECT): tema, animacao, capas, aplicativos, configuracoes do Android. */
     private View buildOptions() {
@@ -579,6 +579,7 @@ public class Home extends Activity implements CarouselApi.Listener {
         labels[OPT_HELP] = "Como jogar (botões)";
         labels[OPT_INFO] = "Informações do sistema";
         labels[OPT_ANDROID] = "Configurações do Android";
+        labels[OPT_EJECT] = "Ejetar pen drive (USB)";
         labels[OPT_REBOOT] = "Reiniciar o aparelho";
         for (int i = 0; i < optRows.size(); i++) {
             TextView r = optRows.get(i);
@@ -672,6 +673,12 @@ public class Home extends Activity implements CarouselApi.Listener {
                 if (dir == 1) {
                     setOptions(false);
                     showPanel("Informações do sistema", infoText());
+                }
+                return;
+            case OPT_EJECT:
+                if (dir == 1) {
+                    toast("Ejetando o pen drive: pode tirar quando a luz apagar");
+                    Catalog.sendCmd("ejeta");
                 }
                 return;
             case OPT_REBOOT:
