@@ -1,0 +1,5 @@
+﻿Icones de sistema: libretro/retroarch-assets (temas XMB "systematic" e "monochrome")
+https://github.com/libretro/retroarch-assets  -  licenca Creative Commons Attribution 4.0 (CC-BY 4.0)
+
+Botoes (assets/botoes): Xelu's Free Controller Prompts, de Nicolae Berbece (thoseawesomeguys.com/prompts), CC0.
+Fundo (assets/fundo.jpg): gerado por art_src/gera_arte.py.

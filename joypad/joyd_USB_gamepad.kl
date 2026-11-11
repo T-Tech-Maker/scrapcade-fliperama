@@ -1,0 +1,38 @@
+# Layout do teclado virtual "joyd USB gamepad" (criado pelo /system/xbin/joyd).
+# O Android 2.3 procura /system/usr/keylayout/<nome do dispositivo>.kl antes do qwerty.kl.
+# Sem a tecla Q de proposito: assim o Android nao trata como teclado alfabetico
+# e o teclado da tela continua aparecendo.
+
+# direcional
+key 103   DPAD_UP
+key 108   DPAD_DOWN
+key 105   DPAD_LEFT
+key 106   DPAD_RIGHT
+key 232   DPAD_CENTER
+
+# botoes de gamepad (BTN_A .. BTN_THUMBR)
+# A = "confirmar" do Android (DPAD_CENTER) e B = "voltar" (BACK): assim o controle
+# funciona em qualquer tela do Android sem tocar na tela. Os emuladores foram
+# configurados para usar DPAD_CENTER/BACK como A/B do jogo.
+key 304   DPAD_CENTER
+key 305   BACK              WAKE_DROPPED
+key 306   BUTTON_C
+key 307   BUTTON_X
+key 308   BUTTON_Y
+key 309   BUTTON_Z
+key 310   BUTTON_L1
+key 311   BUTTON_R1
+key 312   BUTTON_L2
+key 313   BUTTON_R2
+key 314   BUTTON_SELECT
+key 315   BUTTON_START
+key 316   BUTTON_MODE
+key 317   BUTTON_THUMBL
+key 318   BUTTON_THUMBR
+
+# teclas do sistema
+key 158   BACK              WAKE_DROPPED
+key 139   MENU              WAKE_DROPPED
+key 102   HOME              WAKE
+key 28    ENTER
+key 57    SPACE
