@@ -59,6 +59,17 @@ As capas dos jogos e os logos dos consoles nas capturas são de terceiros. Confi
 
 O desenho, as capas em carrossel e o código são próprios. Nenhum arquivo do Aurora ou do Batocera foi copiado.
 
+## Plano futuro
+
+Este projeto é um passo. A ideia maior é **reaproveitar equipamentos que iriam para o lixo** e dar a eles um uso útil, como fliperama ou computador de uso diário.
+
+- **Sistema Linux no lugar do Android 2.3:** um sistema tipo Batocera (distribuição Linux para emuladores), com emuladores atualizados e suporte a mais hardware.
+- **Interface tipo Aurora:** o mesmo carrossel de capas, mas com um front-end próprio que roda nesse sistema.
+- **Equipamentos de sucata:** começar por aparelhos e computadores antigos que já estão parados, para dar uma segunda vida a eles.
+- **Uso do dia a dia:** além de jogos, o mesmo sistema para navegar, assistir vídeos e ouvir música, em aparelhos que de outra forma seriam descartados.
+
+Hoje nada disso existe ainda. O aparelho atual (iChroma II, Android 2.3) é o ponto de partida, e o que está aqui é o que já funciona nele.
+
 ## Como compilar
 
 Precisa de Android SDK (build-tools 37), JDK e, para o driver, Zig 0.17.
