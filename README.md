@@ -87,4 +87,8 @@ O aparelho precisa estar com root e com o sistema alterado para aceitar o driver
 
 - Ícones de sistema: libretro/retroarch-assets, CC-BY 4.0 (ver `launcher/assets/icons/CREDITOS.txt`).
 - Botões: Xelu's Free Controller Prompts, CC0.
-- Índices de CRC e de nomes: derivados de bases públicas (ver `art_src/gera_crc.py`). **Conferir a licença antes de publicar.**
+- Índices de CRC (`launcher/assets/crc`): derivados do libretro-database (metadados e nomes No-Intro), licença **CC BY-SA 4.0**. Estes arquivos seguem a mesma licença.
+- Índice de nomes de Neo Geo e arcade (`launcher/assets/fbneo.idx`): derivado de listas de nomes do MAME/FBNeo, sem licença confirmada.
+- Logotipos de consoles e marcas (Nintendo, Sega, Sony etc.) são de seus titulares e aparecem apenas para identificação. O tema de origem es-theme-carbon não tem licença confirmada.
+- Capas de jogos que aparecem nas capturas e nas fotos são de terceiros e não fazem parte do código.
+- Este projeto não tem fins lucrativos.
