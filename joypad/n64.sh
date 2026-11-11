@@ -19,7 +19,7 @@ done
 ls $P > /dev/null 2>&1 || { am start -n $PKG/.MainActivity > /dev/null; exit 0; }
 
 # troca o jogo e garante o resto da configuracao (controle do joyd, sem botoes na tela, sem contador de quadros)
-grep -v -E 'name="(pathSelectedGame|touchscreenEnabled|inputMapString1|inputEnabled1|videoFpsRefresh|pluginAudio)"' $P | grep -v '</map>' > $T
+grep -v -E 'name="(pathSelectedGame|touchscreenEnabled|inputMapString1|inputEnabled1|videoFpsRefresh|videoResolution|pluginAudio)"' $P | grep -v '</map>' > $T
 # se o grep falhou, nao estraga as preferencias (aconteceu no teste de 10/11/2026: sem /bin no PATH sobrou so o fim do arquivo)
 grep -q 'name="pluginRsp"' $T || { rm $T; am start -n $PKG/.MainActivity > /dev/null; exit 1; }
 echo "<string name=\"pathSelectedGame\">$ROM</string>" >> $T
@@ -28,9 +28,10 @@ echo "<string name=\"pathSelectedGame\">$ROM</string>" >> $T
 echo '<string name="pluginAudio"></string>' >> $T
 echo '<boolean name="touchscreenEnabled" value="false" />' >> $T
 echo '<boolean name="inputEnabled1" value="true" />' >> $T
-# N64: direcional e analogico do controle -> analogico; A=A, X=B, LT=Z, RB=R, LB=L, Y/B/L3/RT = C cima/baixo/esq/dir
+# N64: analogico esquerdo como direcional (teclas 19-22; o eixo analogico nao e reconhecido pelo Android 2.3); A=A, X=B, LT=Z, RB=R, LB=L, Y/B/L3/RT = C cima/baixo/esq/dir
 echo '<string name="inputMapString1">16:22,17:21,18:20,19:19,7:23,6:99,5:104,4:108,12:103,13:102,11:100,10:101,9:106,8:105</string>' >> $T
 echo '<string name="videoFpsRefresh">0</string>' >> $T
+echo '<string name="videoResolution">360</string>' >> $T  # 360 medido: DK64 de 15 para 22 quadros/s; 240 deu 18 e a imagem escurece
 echo '</map>' >> $T
 cat $T > $P
 rm $T
