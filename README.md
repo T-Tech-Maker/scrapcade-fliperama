@@ -44,6 +44,13 @@ Mupen64Plus AE 2.4.4, My Boy! Free e Xash3D.
 - Nintendo 64 roda a 17–39 quadros por segundo, conforme o jogo.
 - Final Fight (versão EUA de 1990) não roda no FB Alpha 2012.
 
+## Capturas
+
+- `capturas/menu.png`: menu principal (carrossel de capas, barra de cima com o filtro e a hora).
+- `capturas/painel_sistema.png`: painel "Sistema" (tema, animações, uso de CPU, memória e cartão).
+
+As capas dos jogos e os logos dos consoles nas capturas são de terceiros. Confirmar antes de tornar o repositório público.
+
 ## Como compilar
 
 Precisa de Android SDK (build-tools 37), JDK e, para o driver, Zig 0.17.
