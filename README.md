@@ -52,7 +52,27 @@ Mupen64Plus AE 2.4.4, My Boy! Free e Xash3D.
 
 Fotos do aparelho (em `fotos/`): frente com o menu ligado, traseira com a porta de rede e o adaptador USB, e o menu ao vivo. A tela mostra capas de jogos de terceiros, a mesma ressalva das capturas.
 
-As capas dos jogos e os logos dos consoles nas capturas são de terceiros. Confirmar antes de tornar o repositório público.
+### Menu principal
+
+![Menu principal](capturas/menu.png)
+
+### Painel Sistema
+
+![Painel Sistema](capturas/painel_sistema.png)
+
+### Gerenciador de arquivos
+
+![Gerenciador de arquivos](capturas/arquivos.png)
+
+### Aparelho
+
+![Aparelho ligado](fotos/aparelho_frente.jpg)
+
+![Menu ao vivo no aparelho](fotos/aparelho_menu_ao_vivo.jpg)
+
+![Traseira com rede e USB](fotos/aparelho_traseira_rede_usb.jpg)
+
+As capas dos jogos e os logos dos consoles nas capturas são de terceiros.
 
 ## Inspirações
 
