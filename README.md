@@ -41,8 +41,9 @@ Mupen64Plus AE 2.4.4, My Boy! Free e Xash3D.
 ## Limitações conhecidas
 
 - O som está desligado: a biblioteca de áudio original do aparelho reinicia o sistema ao abrir um jogo com áudio.
-- Nintendo 64 roda a 17–39 quadros por segundo, conforme o jogo.
-- Final Fight (versão EUA de 1990) não roda no FB Alpha 2012.
+- Nintendo 64 roda a 17–39 quadros por segundo, conforme o jogo. O analógico do controle funciona como direcional: o Android 2.3 não reconhece o eixo como joystick.
+- Transferência por cabo USB não funciona na porta mini USB (ela aparece como adaptador serial). Use o pen drive na porta de cima ou a página na porta 8080.
+- Final Fight (versão EUA de 1990) não roda no FB Alpha 2012: o núcleo só aceita outras revisões do jogo.
 
 ## Capturas
 
